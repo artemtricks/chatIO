@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import App from "../App";
-import { Chat } from "../pages/Chat";
+import { Chat } from "../pages/chat/Chat";
 
 const AppRoutes: React.FC = () => {
   return (

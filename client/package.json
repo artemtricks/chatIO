@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "antd": "^5.17.4",
+    "emoji-picker-react": "^4.9.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.23.1",
+    "sass": "^1.77.4",
     "socket.io": "^4.7.5",
     "socket.io-client": "^4.7.5",
     "zustand": "^4.5.2"
