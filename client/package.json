@@ -12,6 +12,7 @@
   "dependencies": {
     "antd": "^5.17.4",
     "emoji-picker-react": "^4.9.4",
+    "qs": "^6.12.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.23.1",
@@ -21,6 +22,7 @@
     "zustand": "^4.5.2"
   },
   "devDependencies": {
+    "@types/qs": "^6.9.15",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@typescript-eslint/eslint-plugin": "^7.2.0",

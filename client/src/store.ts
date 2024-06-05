@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { FieldType } from "./App";
 
-interface IMessage {
+export interface IMessage {
   user: { name: string };
   message: string;
 }
@@ -11,12 +11,18 @@ interface IField {
   setFormData: (data: FieldType) => void;
   messages: IMessage[];
   setMessages: (message: IMessage) => void;
+  messageChat: string;
+  setMessageChat: (message: string) => void;
 }
 
 export const useFormStore = create<IField>((set, get) => ({
   formData: {},
   messages: [],
-  setFormData: (data: FieldType) => set({ formData: data }),
+  messageChat: "",
+  setFormData: (data: FieldType) => {
+    set({ formData: data });
+  },
   setMessages: (message: IMessage) =>
     set({ messages: [...get().messages, message] }),
+  setMessageChat: (messegeChat: string) => set({ messageChat: messegeChat }),
 }));
