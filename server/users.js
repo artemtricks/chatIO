@@ -12,6 +12,19 @@ export const findUser = (user) => {
   );
 };
 
+export const getRoomUsers = (room) =>
+  users.filter((item) => item.room === room);
+
+export const removeUser = (user) => {
+  const found = findUser(user);
+  if (found) {
+    users = users.filter(
+      (item) => item.room === found.room && item.username !== found.username
+    );
+  }
+  return found;
+};
+
 export const addUser = (user) => {
   const userName = trimText(user.username);
   const room = trimText(user.room);
