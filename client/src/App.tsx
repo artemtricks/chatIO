@@ -3,14 +3,15 @@ import type { FormProps } from "antd";
 import { Button, Form, Input, InputNumber } from "antd";
 import { useNavigate } from "react-router-dom";
 import { useFormStore } from "./store";
+import styles from "./App.module.scss";
 export type FieldType = {
   username?: string;
   room?: string;
 };
 
 const App: React.FC = () => {
-  const { setFormData, formData } = useFormStore((state) => state);
-  console.log(formData, "formdata");
+  const { setFormData } = useFormStore((state) => state);
+
   const navigate = useNavigate();
 
   const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
@@ -28,16 +29,16 @@ const App: React.FC = () => {
 
   return (
     <Form
+      className={styles.formAuth}
       name="basic"
       labelCol={{ span: 8 }}
       wrapperCol={{ span: 16 }}
-      style={{ maxWidth: 900 }}
       initialValues={{ remember: true }}
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
       autoComplete="off"
     >
-      <h1>Войти в чат</h1>
+      <h1 className={styles.title}>Войти в чат</h1>
       <Form.Item<FieldType>
         label="Username"
         name="username"

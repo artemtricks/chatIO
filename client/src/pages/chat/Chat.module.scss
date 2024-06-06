@@ -53,11 +53,9 @@
 }
 
 .input {
-  flex-grow: 1;
 }
 
 .input input {
-  width: 700px;
   height: 60px;
   color: black;
   font-size: 18px;
@@ -83,6 +81,7 @@
   font-size: 18px;
   background: rgb(35, 35, 35);
   padding: 20px;
+  overflow: scroll;
 }
 
 .emoji {
